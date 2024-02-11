@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void decimalToBinary(int n) {
+    if (n > 0) {
+        decimalToBinary(n / 2);
+        printf("%d", n % 2);
+    }
+}
+
+int main() {
+    int num;
+    //printf("Enter a non-negative decimal number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        //printf("Please enter a non-negative decimal number.\n");
+        return 1;
+    }
+
+   // printf("Binary representation: ");
+    decimalToBinary(num);
+
+    return 0;
+}
