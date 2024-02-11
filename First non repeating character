@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+char findFirstNonRepetitive(char str[]) {
+    int length = strlen(str);
+
+    // An array to store the frequency of each character
+    int frequency[256] = {0};
+
+    // Traverse the string and update character frequencies
+    for (int i = 0; i < length; i++) {
+        frequency[str[i]]++;
+    }
+
+    // Traverse the string again to find the first non-repetitive character
+    for (int i = 0; i < length; i++) {
+        if (frequency[str[i]] == 1) {
+            return str[i];  // Found the first non-repetitive character
+        }
+    }
+
+    return '\0';  // If all characters are repetitive
+}
+
+int main() {
+    char inputString[100];
+
+    // Input a string
+    scanf("%s", inputString);
+
+    // Find the first non-repetitive character
+    char result = findFirstNonRepetitive(inputString);
+
+    // Display the result
+    if (result == '\0') {
+        printf("All the characters are repetitive\n");
+    } else {
+        printf("%c\n", result);
+    }
+
+    return 0;
+}
