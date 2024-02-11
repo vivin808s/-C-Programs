@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+   int a;
+  scanf("%d",&a);
+  int s;
+  if(a<=200)
+  {
+    s=a*0.50;
+    printf("Rs.%d",s);
+  }
+  else if(a>=200&&a<=400)
+  {
+    s=a*0.65+100;
+    printf("Rs.%d",s);
+  }
+   else if(a>=400&&a<=600)
+  {
+    s=a*0.80+200;
+    printf("Rs.%d",s);
+  }
+  else
+  {
+    s=a*1.25+425;
+    printf("Rs.%d",s);
+  }
+}
