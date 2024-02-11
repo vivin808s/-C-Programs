@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+int a,b,i,j,r1,r2,r3;
+  scanf("%d%d",&a,&b);
+  for(i=a;i<=b;i++)
+  { 
+     //  int i=j;
+        r1=i/10;
+        r2=i%10;
+    r3=r1*r2+(r1+r2);
+      //printf("%d\n",r1);
+    //printf("%d\n",r3);
+    	if(r3==i)
+          printf("%d\n",i);
+  }
+}
