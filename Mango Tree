@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+ int r, c, t;
+ scanf("%d %d %d", &r, &c, &t);
+ if (t <= c || t % c == 1 || t % c == 0)
+ printf("Yes\n");
+ else
+ printf("No\n");
+ return 0;
+}
