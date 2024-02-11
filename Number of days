@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int isLeapYear(int year) {
+    if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
+        return 1; // Leap year
+    else
+        return 0; // Not a leap year
+}
+
+int main() {
+    int year, month, days;
+
+    // Input
+    scanf("%d%d", &year, &month);
+
+    // Check if the year is within the given range
+    if (year < 1900 || year > 9999) {
+        printf("0\n");
+        return 0;
+    }
+
+    // Check if the month is within the range (1-12)
+    if (month < 1 || month > 12) {
+        printf("0\n");
+        return 0;
+    }
+
+    // Define the number of days in each month (non-leap year)
+    int days_in_month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    // Update the number of days in February for leap years
+    if (isLeapYear(year))
+        days_in_month[1] = 29;
+
+    // Get the number of days for the given month
+    days = days_in_month[month - 1];
+
+    // Output
+    printf("%d Days\n", days);
+
+    return 0;
+}
