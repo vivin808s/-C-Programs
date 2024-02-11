@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+ int n;//791
+ scanf("%d", &n);
+ if (n >= 100 && n <= 999) {
+ int mid = n / 10;//79
+ mid = mid % 10;//9
+ 
+ if (mid % 3 == 0) {//9%3==0
+ printf("Trendy Number\n");
+ } else {
+ printf("Not a Trendy Number\n");
+ }
+ } else {
+ printf("Invalid Number\n");
+ }
+ return 0;
+}
