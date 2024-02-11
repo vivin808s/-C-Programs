@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Function to calculate the number of digits in a number using recursion
+int countDigits(int num) {
+    if (num == 0) {
+        return 0;
+    }
+
+    return 1 + countDigits(num / 10);
+}
+
+int main() {
+    int num;
+
+    // Input a non-negative integer
+    scanf("%d", &num);
+
+    // Calculate and print the number of digits using recursion
+    printf("The number of digits in %d is %d\n", num, countDigits(num));
+
+    return 0;
+}
