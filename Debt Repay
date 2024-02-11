@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+int p,t,r;
+scanf("%d",&p);
+scanf("%d",&t);
+scanf("%d",&r);
+float i=(p*t*r)/100;
+float di=i*(0.02);
+printf("%.2f\n",i);
+printf("%.2f\n",p+i);
+  printf("%.2f\n",di);
+  printf("%.2f",p+i-di);
+}
