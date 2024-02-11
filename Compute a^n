@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Function to calculate a^n using recursion
+long long int power(int a, int n) {
+    if (n == 0) {
+        return 1;
+    }
+
+    return a * power(a, n - 1);
+}
+
+int main() {
+    int a, n;
+
+    // Input values for a and n
+    scanf("%d %d", &a, &n);
+
+    // Calculate and print the result using recursion
+    printf("The value of %d power %d is %lld\n", a, n, power(a, n));
+
+    return 0;
+}
