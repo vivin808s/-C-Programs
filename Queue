@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+  int n,m,a[5],i;
+  scanf("%d",&n);
+  scanf("%d",&m);
+  for(i=0;i<5;i++)
+	scanf("%d",&a[i]);
+  int sum=0;int t=0,c=0;
+  for(i=0;i<n;i++)
+  {
+	if(sum+a[i]>m)
+    {
+      c++;
+      sum=a[i];
+    }
+    else
+    {
+      sum=sum+a[i];
+    }
+    
+  }
+  if(sum)
+    c++;
+  printf("%d",c);
+}
