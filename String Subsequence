@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function to check if s is a subsequence of t
+int isSubsequence(char s[], char t[]) {
+    int sLen = strlen(s);
+    int tLen = strlen(t);
+
+    // Initialize pointers for both strings
+    int i = 0, j = 0;
+
+    // Iterate through both strings
+    while (i < sLen && j < tLen) {
+        // If the current characters match, move to the next character in s
+        if (s[i] == t[j]) {
+            i++;
+        }
+        // Move to the next character in t in any case
+        j++;
+    }
+
+    // If all characters of s are found in t in the same order, s is a subsequence
+    return (i == sLen) ? 1 : 0;
+}
+
+int main() {
+    char t[100], s[100];
+
+    // Input two strings
+    scanf("%s %s", t, s);
+
+    // Check if s is a subsequence of t and print the result
+    printf("%d\n", isSubsequence(s, t));
+
+    return 0;
+}
