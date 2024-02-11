@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+int fp,fd,fs,sp,sd,ss,ap,ad,as;
+  scanf("%d%d%d%d%d%d%d%d%d",&fp,&fd,&fs,&sp,&sd,&ss,&ap,&ad,&as);
+  int f=fp*(100-fd)/100;
+  int s=sp*(100-sd)/100;;
+  int a=ap*(100-ad)/100;;
+  printf("In Flipkart: Rs.%d\n",f+fs);
+  printf("In Snapdeal: Rs.%d\n",s+ss);
+  printf("In Amazon: Rs.%d\n",a+as);
+  if(f<a&&f<s)
+    printf("Choose Flipkart");
+  else if(s<f&&s<a)
+    printf("Choose Snapdeal");
+  else
+    printf("Choose Amazon");
+}
