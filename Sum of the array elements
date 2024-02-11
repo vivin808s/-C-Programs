@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Function to calculate the sum of array elements using recursion
+int arraySum(int arr[], int size) {
+    if (size == 0) {
+        return 0;
+    }
+
+    return arr[size - 1] + arraySum(arr, size - 1);
+}
+
+int main() {
+    int n;
+
+    // Input size of the array
+    scanf("%d", &n);
+
+    // Input array elements
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Calculate and print the sum of array elements using recursion
+    printf("%d\n", arraySum(arr, n));
+
+    return 0;
+}
