@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    // Input string
+    char input[100];
+    //printf("Enter a string: ");
+    scanf("%s", input);
+
+    // Initialize variables
+    int sum = 0;
+    int currentNumber = 0;
+
+    // Iterate through each character in the string
+    for (int i = 0; input[i] != '\0'; i++) {
+        // Check if the current character is a digit
+        if (input[i] >= '0' && input[i] <= '9') {
+            // Update the currentNumber
+            currentNumber = currentNumber * 10 + (input[i] - '0');
+        } else {
+            // Add the currentNumber to the sum and reset it
+            sum += currentNumber;
+            currentNumber = 0;
+        }
+    }
+
+    // Add the last currentNumber to the sum
+    sum += currentNumber;
+
+    // Print the sum
+    printf("%d\n", sum);
+
+    return 0;
+}
