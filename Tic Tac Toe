@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+   int matrix[3][3];
+  int n,i,j;
+  scanf("%d",&n);
+switch(n)
+{
+  case 1: printf("0 0");
+    		break;
+    case 2: printf("0 1");
+    		break;
+      case 3: printf("0 2");
+    		break;
+      case 4: printf("1 0");
+    		break;
+      case 5: printf("1 1");
+    		break;
+      case 6: printf("1 2");
+    		break;
+      case 7: printf("2 0");
+    		break;
+      case 8: printf("2 1");
+    		break;
+          case 9: printf("2 2");
+    		break;
+  default:
+    break;
+}
+  }
+  
