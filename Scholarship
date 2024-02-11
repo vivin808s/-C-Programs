@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+ int age, year, income, arrear;
+ float score, attendance;
+ scanf("%d %d %d %d %f %f", &age, &year, &income, &arrear, &score, &attendance);
+ if (age >= 18 && age < 21 && year >= 2021 && score >= 60.0 && attendance >= 80.0) {
+ if (arrear <= 2 && income <= 200000)
+ printf("Eligible\n");
+ else if (arrear > 2 && income <= 200000) {
+ if (score >= 80.0 && attendance >= 90.0)
+ printf("Partially Eligible\n");
+ else
+ printf("Not Eligible\n");
+ } else if (arrear > 2 && income > 200000 && income < 250000) {
+ if (score >= 80.0 && attendance >= 90.0)
+ printf("Partially Eligible\n");
+ else
+ printf("Not Eligible\n");
+ } else if (arrear <= 2 && income > 200000 && income < 250000)
+ printf("Partially Eligible\n");
+ else
+ printf("Not Eligible\n");
+ } else {
+ printf("Not Eligible\n");
+ }
+ return 0;
+}
