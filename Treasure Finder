@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main()
+{
+   int a,b,c;
+  scanf("%d%d%d",&a,&b,&c);
+  int h,d,i,f;
+  if(a>b&a>c)
+  {
+     h=a;
+    if(b>c)
+    d=b;
+    else
+      d=c;
+   
+  }
+  else if(b>a&b>c)
+  {
+    h=b;
+    if(a>c)
+      d=a;
+    else
+      d=c;
+  }
+  else
+  {
+    h=c;
+    if(a>b)
+      d=a;
+      else
+        d=b;
+  }
+  
+  printf("The treasure is in the box which has the number %d\n",d);
+  
+  for(i=1;i<h;i++)
+  {
+    if(a%i==0&&b%i==0&&c%i==0)
+      f=i;
+  }
+  printf("The code to open the box is %d",f);
+  
+}
