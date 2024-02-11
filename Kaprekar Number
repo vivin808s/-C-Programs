@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+int n,j,k,i,l,rem1=0,rem2=0,c1=0,c2=0,a;
+  scanf("%d",&n);
+  k=n*n;
+  j=k;
+  l=n;
+   while(l!=0)
+  {
+    l=l/10;
+    c1++;
+  }
+  int r=pow(10,c1);
+ // printf("%d",r);
+  rem1=k/r;
+  rem2=k%r;
+  int rem=rem1+rem2;
+  //printf("%d\n",rem);
+  //printf("%d\n",k);
+  if(rem==n)
+  printf("Kaprekar Number\n");
+  else
+    printf("Not a Kaprekar Number\n");
+
+  
+}
