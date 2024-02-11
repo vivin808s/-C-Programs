@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+// Define a structure for distance
+struct Distance {
+    int feet;
+    float inch;
+};
+
+int main() {
+    // Declare structure variables for distance1 and distance2
+    struct Distance distance1, distance2, sumDistance;
+
+    // Input distance1
+    scanf("%d %f", &distance1.feet, &distance1.inch);
+
+    // Input distance2
+    scanf("%d %f", &distance2.feet, &distance2.inch);
+
+    // Add the distances
+    sumDistance.feet = distance1.feet + distance2.feet;
+    sumDistance.inch = distance1.inch + distance2.inch;
+
+    // Convert inches to feet if necessary
+    if (sumDistance.inch >= 12.0) {
+        sumDistance.inch -= 12.0;
+        sumDistance.feet++;
+    }
+
+    // Output the result
+    if (sumDistance.inch == (int)sumDistance.inch) {
+        // If inches is an integer, print it without decimal
+        printf("%d'-%.0f\"\n", sumDistance.feet, sumDistance.inch);
+    } else {
+        // If inches is a decimal, print it with one decimal point
+        printf("%d'-%.1f\"\n", sumDistance.feet, sumDistance.inch);
+    }
+
+    return 0;
+}
