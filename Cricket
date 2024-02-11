@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+ int total_balls, total_runs, runs_scored, balls_bowled;
+ scanf("%d %d %d %d", &total_balls, &total_runs, &runs_scored, &balls_bowled);
+ int overs = total_balls / 6;
+ float overs_done = balls_bowled / 6 + (balls_bowled % 6) * 0.1;
+ float crr = runs_scored / overs_done;
+ float trr = (float)total_runs / overs;
+ printf("%d\n", overs);
+ printf("%.1f\n", overs_done);
+ printf("%.1f\n", crr);
+ printf("%.1f\n", trr);
+ if (crr > trr)
+ printf("Eligible to Win");
+ else
+ printf("Not Eligible to Win");
+ return 0;
+}
