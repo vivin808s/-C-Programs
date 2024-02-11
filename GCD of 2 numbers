@@ -1,0 +1,24 @@
+#include<stdio.h>
+int gcd(int,int);
+int main()
+{
+	int a,b,g;
+	//intf("Venkatesh P\n");
+	//printf("HU21EECE0100502\n");
+	//printf("enter the two numbers \n");
+	scanf("%d %d",&a,&b);
+	g=gcd(a,b);
+	printf(" %d\n",g);
+}
+int gcd(int a,int b)
+{
+	if(a%b==0)
+	{
+		return b;
+	}
+	else
+	{
+		return gcd(b,a%b);
+	}
+}
+
