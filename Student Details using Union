@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    // Declare variables
+    char grade;
+    char rollno[20];
+    float mark;
+    int feesPaid;
+
+    // Input data
+  //  printf("Enter grade: ");
+    scanf(" %c", &grade);
+    getchar();  // Consume newline character
+
+   // printf("Enter rollno: ");
+    scanf("%s", rollno);
+
+    //printf("Enter mark: ");
+    scanf("%f", &mark);
+
+    //printf("Enter fees paid: ");
+    scanf("%d", &feesPaid);
+
+    // Output data
+    printf("Grade is: %c\n", grade);
+    printf("Rollno is: %s\n", rollno);
+
+    // Check if mark is a whole number or has decimal values
+    if (mark == (int)mark) {
+        printf("Mark is: %d\n", (int)mark);
+    } else {
+        printf("Mark is: %.2f\n", mark);
+    }
+
+    printf("Fees paid is: %d\n", feesPaid);
+
+    return 0;
+}
