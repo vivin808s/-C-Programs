@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main()
+{
+   float a,c,b,d;
+  scanf("%f%f%f%f",&a,&c,&b,&d);
+  printf("Arun's house is located at(%0.1f,%0.1f)",(a+b)/2,(c+d)/2);
+}
