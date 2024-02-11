@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main()
+{
+   int t,l,b,lb,bl,o;
+  scanf("%d%d%d",&t,&l,&b);
+  lb=(l*t)/100;
+  bl=(b*(t-lb))/100;
+  o=(t-lb-bl)/3;
+  printf("%d\n%d\n%d",lb,bl,o);
+}
