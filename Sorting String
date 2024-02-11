@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+void sortString(char str[]) {
+    int length = 0;
+
+    // Calculate the length of the string
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    // Bubble sort to sort the characters in ascending order
+    for (int i = 0; i < length - 1; i++) {
+        for (int j = 0; j < length - i - 1; j++) {
+            if (str[j] > str[j + 1]) {
+                // Swap characters if they are in the wrong order
+                char temp = str[j];
+                str[j] = str[j + 1];
+                str[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    char inputString[100];
+
+    // Input a string
+    scanf("%s", inputString);
+
+    // Sort the string in ascending order
+    sortString(inputString);
+
+    // Display the sorted string
+    printf("%s\n", inputString);
+
+    return 0;
+}
