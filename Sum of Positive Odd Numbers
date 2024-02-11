@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+// Function to find the sum of positive odd numbers in an array using recursion
+int sumPositiveOdd(int arr[], int size) {
+    // Base case: if the array is empty, return 0
+    if (size == 0) {
+        return 0;
+    }
+
+    // Recursive case: sum the positive odd numbers in the rest of the array
+    int current = arr[0];
+    int sumInRest = sumPositiveOdd(arr + 1, size - 1);
+
+    // Check if the current element is a positive odd number
+    if (current > 0 && current % 2 != 0) {
+        return current + sumInRest;
+    }
+
+    return sumInRest;
+}
+
+int main() {
+    int size;
+
+    // Input size of the array
+    scanf("%d", &size);
+
+    // Input array elements
+    int arr[size];
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Find and print the sum of positive odd numbers in the array using recursion
+    printf("Sum = %d\n", sumPositiveOdd(arr, size));
+
+    return 0;
+}
