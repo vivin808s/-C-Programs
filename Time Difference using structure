@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+// Define a structure for time
+struct Time {
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+int main() {
+    // Declare structure variables for time1 and time2
+    struct Time time1, time2;
+
+    // Input time1
+   // printf("Enter hours of time1: ");
+    scanf("%d", &time1.hours);
+   // printf("Enter minutes of time1: ");
+    scanf("%d", &time1.minutes);
+   // printf("Enter seconds of time1: ");
+    scanf("%d", &time1.seconds);
+
+    // Input time2
+   // printf("Enter hours of time2: ");
+    scanf("%d", &time2.hours);
+  //  printf("Enter minutes of time2: ");
+    scanf("%d", &time2.minutes);
+   // printf("Enter seconds of time2: ");
+    scanf("%d", &time2.seconds);
+
+    // Calculate the difference
+    int diffHours, diffMinutes, diffSeconds;
+
+    diffSeconds = time1.seconds - time2.seconds;
+    if (diffSeconds < 0) {
+        diffSeconds += 60;
+        time1.minutes--;
+    }
+
+    diffMinutes = time1.minutes - time2.minutes;
+    if (diffMinutes < 0) {
+        diffMinutes += 60;
+        time1.hours--;
+    }
+
+    diffHours = time1.hours - time2.hours;
+
+    // Output the result
+    printf("TIME DIFFERENCE: %d:%d:%d - %d:%d:%d = %d:%d:%d\n",
+           time1.hours, time1.minutes, time1.seconds,
+           time2.hours, time2.minutes, time2.seconds,
+           diffHours, diffMinutes, diffSeconds);
+
+    return 0;
+}
