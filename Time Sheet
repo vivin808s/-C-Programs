@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+  int sun,mon,tue,wed,thu,fri,sat;
+  int rate1,rate2,amount,amount1,amount2,amount3,amount4,bonusrate,bonusamount,bonusamount1,bonusamount2,bonusamount3,bonusamount4,total;
+  scanf("%d%d%d%d%d%d%d",&sun,&mon,&tue,&wed,&thu,&fri,&sat);
+  rate1=sun*150;
+  rate2=sat*125;
+  if (mon<=8){
+    amount1=mon*100;
+  }
+  else{
+    bonusrate=(mon-8)*115;
+    amount1=800+bonusrate;
+  }
+  if (tue<=8){
+    amount2=tue*100;
+  }
+  else{
+    bonusrate=(tue-8)*115;
+    amount2=800+bonusrate;
+  }
+  if (wed<=8){
+    amount3=wed*100;
+  }
+  else{
+    bonusrate=(wed-8)*115;
+    amount3=800+bonusrate;
+  }
+  if (thu<=8){
+    amount4=thu*100;
+  }
+  else{
+    bonusrate=(thu-8)*115;
+    amount4=800+bonusrate;
+  }
+  if (fri<=8){
+    amount=fri*100;
+  }
+  else{
+    bonusrate=(fri-8)*115;
+    amount=800+bonusrate;
+  }
+  total=rate1+rate2+amount+amount1+amount2+amount3+amount4;
+  printf("%d",total);
+
+  
+    
+    return 0;
+}
