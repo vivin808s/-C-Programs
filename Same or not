@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+ int s1, s2, sum1 = 0, sum2 = 0, i, j;
+ scanf("%d %d", &s1, &s2);
+ int a1[s1], a2[s2];
+ for (i = 0; i < s1; i++) {
+ scanf("%d", &a1[i]);
+ sum1 += a1[i];
+ }
+ for (j = 0; j < s2; j++) {
+ scanf("%d", &a2[j]);
+ sum2 += a2[j];
+ }
+ if (s1 == s2 && sum1 == sum2) {
+ printf("Same");
+ } else {
+ printf("Not Same");
+ }
+ return 0;
+}
