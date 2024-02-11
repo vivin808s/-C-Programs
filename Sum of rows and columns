@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main() {
+ int r, c, x, m1, mi;
+ scanf("%d %d", &r, &c);
+ int rw[r];
+ int cw[c];
+ for (int i = 0; i < r; i++)
+ rw[i] = 0;
+ for (int i = 0; i < c; i++)
+ cw[i] = 0;
+ for (int i = 0; i < r; i++) {
+ for (int j = 0; j < c; j++) {
+ scanf("%d", &x);
+ rw[i] += x;
+ cw[j] += x;
+ }
+ }
+ printf("The Sum of rows is");
+ mi = 0;
+ m1 = 1;
+ for (int i = 0; i < r; i++) {
+ printf(" %d", rw[i]);
+ if (mi < rw[i]) {
+ mi = rw[i];
+ m1 = i + 1;
+ }
+ }
+ printf("\nRow %d has a maximum sum\n", m1);
+ printf("The Sum of columns is");
+ mi = 0;
+ m1 = 1;
+ for (int i = 0; i < c; i++) {
+ if (mi < cw[i]) {
+ mi = cw[i];
+ m1 = i + 1;
+ }
+ printf(" %d", cw[i]);
+ }
+ printf("\nColumn %d has the maximum sum\n", m1);
+ return 0;
+}
